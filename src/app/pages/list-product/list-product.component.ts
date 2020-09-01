@@ -26,13 +26,13 @@ export class ListProductComponent implements OnInit {
   dataAccount: string | undefined;
 
   // use for filter data account
-  name: string;
-  type: string;
-  description: string;
-  sort_field: string;
-  sort_type: string;
-  page: number;
-  per_page: number;
+  name: string = '';
+  type: string = '';
+  description: string = '';
+  sort_field = 1;
+  sort_type = 1;
+  page: number = 0;
+  per_page: number = 0;
 
   addAccount: boolean = false;
   accountForm: FormGroup;
@@ -92,7 +92,7 @@ export class ListProductComponent implements OnInit {
       )
       .subscribe(
         (data: any) => {
-          let datas = data;
+          let datas = data.data;
           this.dataAccount = datas;
           console.log("datas " + JSON.stringify(datas));
         },

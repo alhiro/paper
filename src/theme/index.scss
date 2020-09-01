@@ -966,9 +966,6 @@ table {
     font-family: "Lato", sans-serif;
     font-weight: 700;
     font-size: 20px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    word-spacing: 3px;
 
     &:nth-child(1) {
       width: 25%;
@@ -989,27 +986,9 @@ table {
 
   tbody td {
     font-family: "Lato", sans-serif;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 16px;
-
-    &:nth-child(1) {
-      font-family: "Lato", sans-serif;
-      font-weight: 400;
-      font-size: 16px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      color: $default;
-    }
-
-    &:nth-child(2) {
-      font-family: "Lato", sans-serif;
-      font-weight: 400;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      color: $default;
-      font-weight: 700;
-      font-size: 16px;
-    }
+    text-align: left;
   }
 }
 

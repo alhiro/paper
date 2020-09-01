@@ -83,9 +83,6 @@ export class AuthenticationService {
 
     const getToken = token.token;
 
-    if (getToken === null) {
-      this.logout();
-    }
     // const headers = new HttpHeaders(
     //   {
     //     'Authorization': 'Bearer ' + getToken,
@@ -95,7 +92,7 @@ export class AuthenticationService {
     //   }
     // );
 
-    const headers: HttpHeaders = new HttpHeaders({ 'x-access-token': getToken });
+    const headers: HttpHeaders = new HttpHeaders({ Authorization: 'Bearer ' + getToken });
     // set('Access-Control-Allow-Origin', '* ').
     // set('Content-Type', 'application/json').
     // set('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS')

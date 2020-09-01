@@ -12,8 +12,8 @@ export interface Get {
   name: string;
   type: string;
   description: string;
-  sort_field: string;
-  sort_type: string;
+  sort_field: number;
+  sort_type: number;
   page: number;
   per_page: number;
 }
@@ -31,8 +31,7 @@ export interface DeleteAccount {
 }
 
 const routes = {
-  getAcc: (c: Get) => `/api/v1/finance-accounts?name=${c.name}&description=${c.description}&type=${c.type}&sort_fi
-  eld=${c.sort_field}&sort_type=${c.sort_type}&page=${c.page}&per_page=${c.per_page}`,
+  getAcc: (c: Get) => `/api/v1/finance-accounts?name=${c.name}&description=${c.description}&type=${c.type}&sort_field=${c.sort_field}&sort_type=${c.sort_type}&page=${c.page}&per_page=${c.per_page}`,
   deleteAcc: (c: DeleteAccount) => `/api/v1/finance-accounts/${c.id}`,
 };
 
