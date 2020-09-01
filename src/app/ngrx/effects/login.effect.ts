@@ -7,12 +7,6 @@ import { HttpClient } from '@angular/common/http';
 import { CredentialsService } from '@app/auth';
 import { ActivatedRoute, Router } from '@angular/router';
 
-export interface LoginContext {
-  email: string;
-  password: string;
-  remember?: boolean;
-}
-
 @Injectable({
   providedIn: 'root',
 })
@@ -45,9 +39,10 @@ export class LoginEffects {
           map((response: any) => {
             console.log('payload ' + JSON.stringify(response));
 
-            const data = {
-              email: payload.email,
+            const data = {              
+              name: payload.email,
               token: response.token,
+              last_login: response.last_login,
             };
             this.credentialsService.setCredentials(data, payload.remember);
 

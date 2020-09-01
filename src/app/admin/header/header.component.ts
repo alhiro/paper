@@ -24,7 +24,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
   get email(): string | null {
     const credentials = this.credentialsService.credentials;
-    return credentials ? credentials.email : null;
+    return credentials ? credentials.name : null;
   }
 
   ngOnInit() {
@@ -59,8 +59,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
   }
 
   logout() {
-    this.authenticationService.logout().subscribe(() => this.router.navigate(['/home'], { replaceUrl: true }));
-    this.isloged();
+    this.authenticationService.logout().subscribe(() => this.router.navigate(['/login'], { replaceUrl: true }));
   }
 
   toggleSideMenu() {

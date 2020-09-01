@@ -6,7 +6,8 @@ import { catchError, map } from 'rxjs/operators';
 import { Credentials, CredentialsService } from './credentials.service';
 
 export interface LoginContext {
-  email: string;
+  last_login: string;
+  name: string;
   password: string;
   remember?: boolean;
 }
@@ -30,14 +31,15 @@ export class AuthenticationService {
   login(context: LoginContext): Observable<any> {
     return this._http
       .post('/auth/signin', {
-        email: context.email,
+        email: context.name,
         password: context.password,
       })
       .pipe(
         map((response) => {
           const result = response as any;
           const data = {
-            email: context.email,
+            last_login: context.last_login,
+            name: context.name,
             token: result.token,
           };
           this.credentialsService.setCredentials(data, context.remember);
