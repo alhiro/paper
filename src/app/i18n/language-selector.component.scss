@@ -1,0 +1,17 @@
+.nav-link.dropdown-toggle {
+  cursor: pointer;
+}
+
+.language-dropdown {
+  cursor: pointer;
+
+  .dropdown-item {
+    cursor: pointer;
+    padding: 10px 20px;
+
+    img {
+      display: inline-block;
+      margin-right: 10px;
+    }
+  }
+}

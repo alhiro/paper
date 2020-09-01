@@ -1,0 +1,19 @@
+<!-- Opsi Loading Login / Register -->
+<div class="preloader" *ngIf="loadable.loading">
+  <div class="preloader-content">
+    <span>{{ message }}</span>
+    <div class="preloader-item-1"></div>
+    <div class="preloader-item-2"></div>
+    <div class="preloader-item-3"></div>
+    <div class="preloader-item-4"></div>
+    <div class="preloader-item-5"></div>
+  </div>
+</div>
+
+<div class="alert alert-danger" *ngIf="loadable.error" translate>
+  {{ loadable?.error?.message || 'Something went wrong' }}
+</div>
+
+<ng-container *ngIf="loadable.success">
+  <ng-content></ng-content>
+</ng-container>

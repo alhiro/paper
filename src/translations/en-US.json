@@ -1,0 +1,29 @@
+{
+  "APP_NAME": "Paper",
+  "Home": "Home",
+  "Article": "Article",
+  "About Us": "About Us",
+  "Event": "Event",
+  "Help/Support": "Help/Support",
+
+  "Logged in as": "Logged in as",
+  "Login": "Sign In",
+  "Register": "Register",
+  "Logout": "Logout",
+  "Your Business": "Your Business",
+
+  "Name": "Name",
+  "Email": "Email",
+  "Password": "Password",
+  "Password is required": "Password is required",
+  "Username": "Username",
+  "Username is required": "Username is required",
+  "Username or password incorrect.": "Username or password incorrect.",
+  "Remember me": "Remember me",
+  "Version": "Version",
+  "Don't have an account? Please register": "Don't have an account? Please register",
+  "Have an account? Please login": "Have an account? Please login",
+
+  "More info via Whatsapp?": "Join via Whatsapp?",
+  "Click here!": "Click here!"
+}

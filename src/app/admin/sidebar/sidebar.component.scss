@@ -1,0 +1,48 @@
+@import "../../../theme/theme-variables";
+
+.logo {
+  padding: 8px;
+  margin: 12px;
+}
+
+.menu-wrapper {
+  li {
+    &.side-menu {
+      padding: 0;
+      border: none;
+
+      a {
+        color: #fff;
+        width: 100%;
+        padding: 0 30px;
+        position: relative;
+
+        &.active {
+          &:before {
+            content: "";
+            width: 5px;
+            height: 100%;
+            background-color: $default;
+            position: absolute;
+            left: 0;
+
+          }
+        }
+      }
+
+      span {
+        position: relative;
+        top: 2px;
+      }
+
+      svg {
+        margin-right: 10px;
+        padding: 1px;
+      }
+
+      &:before {
+        display: none;
+      }
+    }
+  }
+}

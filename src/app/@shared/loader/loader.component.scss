@@ -1,0 +1,17 @@
+.fa {
+  vertical-align: middle;
+}
+
+.preloader {
+  display: block;
+  visibility: visible;
+  opacity: 1;
+  transition: all 0.5s ease-out;
+}
+
+.preloader[hidden] {
+  display: block !important;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s ease-in;
+}

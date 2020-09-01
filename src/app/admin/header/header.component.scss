@@ -1,0 +1,131 @@
+header {
+  .user-header {
+    color: #15110d;
+    margin-bottom: 0;
+  }
+
+  .navbar {
+    .logo {
+      height: 55px;
+
+      img {
+        height: 100%;
+        position: relative;
+        top: -3px;
+      }
+
+      &:hover {
+        background: transparent;
+      }
+    }
+  }
+}
+
+.logo-center {
+  width: 250px;
+  margin: 0 auto;
+}
+
+.nav-link.dropdown-toggle {
+  cursor: pointer;
+}
+
+.alert-whatsapp {
+  color: #ffffff;
+  margin: 0;
+  text-align: center;
+  border-radius: 0;
+  padding: 0.75rem;
+
+  button {
+    color: #ffffff;
+    padding: 0px;
+    top: 11px;
+    right: 15px;
+    font-weight: 100;
+    opacity: 1;
+
+    &:hover {
+      background: transparent;
+      color: #ffffff;
+      text-decoration: none;
+      border: none;
+    }
+  }
+}
+
+.main-title {
+  font-family: "Great Vibes", cursive;
+  text-transform: none;
+  font-size: 3rem;
+  font-weight: 300;
+  margin: 0 auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.search-form {
+  border: 1px solid #ffffff;
+
+  button {
+    color: #ffffff;
+  }
+
+  input {
+    color: #ffffff;
+
+    &::placeholder {
+      color: #ffffff;
+    }
+  }
+}
+
+.profile-menu {
+  display: inline;
+
+  a {
+    cursor: pointer;
+  }
+
+  .header-sign {
+    img {
+      width: 28px;
+      height: 28px;
+    }
+  }
+}
+
+.dropdown-toggle {
+  .dropdown-toggle {
+    cursor: pointer;
+  }
+
+  &:after {
+    display: none;
+  }
+}
+
+.language-dropdown {
+  .dropdown-toggle {
+    cursor: pointer;
+
+    img {
+      height: 26px;
+      width: 26px;
+    }
+  }
+
+  .dropdown-item {
+    cursor: pointer;
+    padding: 10px 20px;
+
+    img {
+      height: 28px;
+      width: 28px;
+      display: inline-block;
+      margin-right: 10px;
+    }
+  }
+}

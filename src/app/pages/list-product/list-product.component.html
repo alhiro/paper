@@ -1,0 +1,173 @@
+<!-- Begin breadcrumbs -->
+<section class="space-top">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="hot-categories">
+          <p>Dashboard / Finance</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End breadcrumbs -->
+
+<section class="default-page mb-5">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+
+        <ul ngbNav #nav="ngbNav" class="nav-tabs">
+          <li [ngbNavItem]="1">
+            <a ngbNavLink>Account</a>
+            <ng-template ngbNavContent>
+              <div class="content-wrap">
+                <div class="list-product">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <h4>All Finance Account</h4>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="action text-left">
+                            <input class="search" type="text" pInputText placeholder="Search"/>
+                            <i class="pi pi-search"></i>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="action text-right">
+                            <button class="btn btn-primary btn-rounded" (click)="addFinanceModal()">
+                              Create New Account
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="table-wrapper table-responsive">
+                        <now-loading [isLoading]="isLoading"></now-loading>
+      
+                        <p-table
+                          [value]="dataAccount"
+                          [paginator]="true"
+                          [rows]="10"
+                          [rowsPerPageOptions]="[5, 10, 20]"
+                          [showCurrentPageReport]="true"
+                          currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+                          [(first)]="first"
+                          selectionMode="single"
+                          class="table table-hover"
+                        >
+                          <ng-template pTemplate="header">
+                            <tr>
+                              <th style="text-align: left">Account Name</th>
+                              <th style="text-align: left">Description</th>
+                              <th style="text-align: left">Account Type</th>
+                              <th>Action</th>
+                            </tr>
+                          </ng-template>
+                          <ng-template pTemplate="body" let-item let-i="rowIndex">
+                            <tr (click)="onRowSelect(item)">                              
+                              <td>
+                                <span>
+                                  {{ item.name }}
+                                </span>
+                              </td>
+                              <td class="text-left">
+                                <span>
+                                  {{ item.type }}
+                                </span>
+                              </td>
+                              <td>
+                                <span>
+                                  {{ item.description }}
+                                </span>
+                              </td>
+                              <td>
+                                <span>
+                                
+                                </span>
+                              </td>
+                            </tr>
+                          </ng-template>
+                        </p-table>
+                      </div>
+      
+                      <!-- Create Product Modal -->
+                      <p-dialog [(visible)]="addAccount" [modal]="true" styleClass="modal-paper">
+                        <form [formGroup]="accountForm" novalidate>
+                          <div class="row">
+                            <div class="col-md-12">
+                              <div class="form-group">
+                                <small class="title">finance</small>
+                                <label class="d-block">
+                                  <small>Account Name</small>
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    formControlName="name"
+                                    autocomplete="name"
+                                    placeholder="eg: cash, bank, etc"
+                                  />
+                                </label>
+      
+                                <label class="d-block">
+                                  <small>Type</small>
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    formControlName="type"
+                                    autocomplete="type"
+                                    placeholder="eg: cash/bank/wallet"
+                                  />
+                                </label>
+      
+                                <label class="d-block">
+                                  <small>Description</small>
+                                  <input
+                                    type="text"
+                                    class="form-control no-border"
+                                    formControlName="description"
+                                    autocomplete="description"
+                                    placeholder="Description"
+                                  />
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="text-center">
+                            <button
+                              class="btn btn-success btn-rounded"
+                              (click)="createAccount()"
+                              [disabled]="accountForm.invalid || isLoading"
+                            >
+                              <i class="fas fa-cog fa-spin" [hidden]="!isLoading"></i>
+                              <span translate>Simpan</span>
+                            </button>
+
+                            <button
+                            class="btn btn-cancel btn-rounded"
+                            (click)="closeFinanceModal()"                           
+                            >
+                              <span translate>Batal</span>
+                            </button>
+                          </div>
+                        </form>
+                      </p-dialog>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </ng-template>
+          </li>
+          <li [ngbNavItem]="2">
+            <a ngbNavLink>Transaction</a>
+            <ng-template ngbNavContent>
+              <p>Tab Transaction</p>
+            </ng-template>
+          </li>
+        </ul>
+        
+        <div [ngbNavOutlet]="nav" class="mt-2"></div>
+      </div>
+    </div>
+  </div>
+</section>

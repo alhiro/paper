@@ -1,0 +1,55 @@
+{
+  "generator-ngx-rocket": {
+    "version": "8.0.1",
+    "props": {
+      "location": "path",
+      "strict": false,
+      "skipInstall": false,
+      "skipQuickstart": false,
+      "initGit": true,
+      "usePrefix": true,
+      "appName": "paper",
+      "target": ["web", "cordova"],
+      "pwa": true,
+      "mobile": ["ios", "android"],
+      "ui": "bootstrap",
+      "auth": true,
+      "lazy": true,
+      "angulartics": false,
+      "languages": ["id-ID", "en-US"],
+      "tools": ["prettier", "hads", "jest"],
+      "utility": ["lodash", "moment"],
+      "deploy": "none",
+      "projectName": "paper",
+      "packageManager": "npm",
+      "desktop": []
+    }
+  },
+  "generator-addon-firebase": {
+    "version": "2.0.0",
+    "props": {
+      "firebaseDeploy": false,
+      "appName": "paper",
+      "projectName": "paper",
+      "packageManager": "npm",
+      "location": "path",
+      "strict": false,
+      "skipInstall": false,
+      "skipQuickstart": false,
+      "initGit": true,
+      "usePrefix": true,
+      "target": ["web", "cordova"],
+      "pwa": true,
+      "mobile": ["ios", "android"],
+      "ui": "bootstrap",
+      "auth": true,
+      "lazy": true,
+      "angulartics": false,
+      "languages": ["id-ID", "en-US"],
+      "tools": ["prettier", "hads", "jest"],
+      "utility": ["lodash", "moment"],
+      "deploy": "none",
+      "desktop": []
+    }
+  }
+}

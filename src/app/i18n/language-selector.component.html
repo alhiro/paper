@@ -1,0 +1,27 @@
+<!-- <div [ngClass]="{ 'nav-item': inNavbar }" ngbDropdown>
+  <a *ngIf="inNavbar; else button" id="language-dropdown" class="nav-link" ngbDropdownToggle>
+    {{ currentLanguage | translate }}
+  </a>
+  <ng-template #button>
+    <button id="language-dropdown" class="btn btn-sm btn-secondary" ngbDropdownToggle>
+      {{ currentLanguage }}
+    </button>
+  </ng-template>
+  <div ngbDropdownMenu aria-labelledby="language-dropdown" [ngClass]="menuClass">
+    <button class="dropdown-item" *ngFor="let language of languages" (click)="setLanguage(language)">
+      {{ language | translate }}
+    </button>
+  </div>
+</div> -->
+
+<div class="language-dropdown" ngbDropdown display="dynamic" placement="bottom-center">
+  <a class="dropdown-toggle" data-toggle="dropdown" ngbDropdownToggle>
+    <img src="assets/language/{{ currentLanguage }}.png" class="flag-width" alt="flag" />
+  </a>
+  <div class="dropdown-menu position-absolute" ngbDropdownMenu aria-labelledby="language-dropdown">
+    <a class="dropdown-item d-flex" *ngFor="let language of languages" (click)="setLanguage(language)">
+      <img src="assets/language/{{ language }}.png" class="flag-width" alt="flag" />
+      <span class="align-self-center">&nbsp;{{ language }}</span>
+    </a>
+  </div>
+</div>

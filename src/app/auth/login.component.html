@@ -1,0 +1,85 @@
+<div class="login-container">
+  <div class="login-box">
+    <img class="logo" src="assets/img/paperlogowhite.svg" alt="Logo Paper">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-sm-12">
+          <div class="card-body">
+            <h1 translate>
+              Masuk ke Paper.id <img class="icon-shield" src="assets//img/Tutorial.svg" alt="Paper Tutorial" />
+            </h1>
+            <p>
+              Masuk dengan akun yang terdaftar di Paper.id/PayPer
+            </p>
+  
+            <form (ngSubmit)="onSubmit()" [formGroup]="loginForm" novalidate>
+              <app-loader [loadable]="login$ | async"></app-loader>              
+  
+              <div class="form-group">
+                <label class="d-block">
+                  <img class="icon" src="assets/img/icon_account_white.svg" alt="Logo Akun">
+                  <input
+                    type="text"
+                    class="form-control"
+                    formControlName="email"
+                    autocomplete="email"
+                    [placeholder]="'Email' | translate"
+                  />
+                  <span hidden translate>Email</span>
+                  <small
+                    [hidden]="loginForm.controls.email.valid || loginForm.controls.email.untouched"
+                    class="text-danger"
+                    translate
+                  >
+                    Email is required
+                  </small>
+                </label>
+                <label class="d-block">
+                  <img class="icon" src="assets/img/icon_lock_white.svg" alt="Logo Akun">
+                  <input
+                    type="password"
+                    class="form-control"
+                    formControlName="password"
+                    autocomplete="password"
+                    [placeholder]="'Password' | translate"
+                    required
+                  />
+                  <span hidden translate>Password</span>
+                  <small
+                    [hidden]="loginForm.controls.password.valid || loginForm.controls.password.untouched"
+                    class="text-danger"
+                    translate
+                  >
+                    Password is required
+                  </small>
+                </label>
+
+                <div class="row">
+                  <div class="col-lg-6 col-sm-12 remember-me">
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" formControlName="remember" />
+                        <span translate>Remember me</span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-lg-6 col-sm-12 text-right">
+                    <span> Lupa kata sandi? </span>
+                  </div>
+                </div>
+              </div>
+              <button class="btn btn-primary w-100" type="submit" [disabled]="loginForm.invalid || isLoading">
+                <i class="fas fa-cog fa-spin" [hidden]="!isLoading"></i>
+                <span translate>Login</span>
+              </button>
+            </form>
+          </div>
+        </div>
+        <div class="col-md-6">
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

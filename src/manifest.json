@@ -1,0 +1,21 @@
+{
+  "name": "paper",
+  "short_name": "paper",
+  "theme_color": "#c01f25",
+  "background_color": "#e8b30b",
+  "scope": "/",
+  "start_url": "index.html",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "assets/logo.svg",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/logo@192.svg",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "APP_NAME": "Paper",
+  "Home": "Beranda",
+  "Article": "Artikel",
+  "About Us": "Tentang Kami",
+  "Event": "Acara",
+  "Help/Support": "Bantuan",
+
+  "Logged in as": "Masuk sebagai",
+  "Login": "Masuk",
+  "Register": "Daftar",
+  "Logout": "Keluar",
+  "Your Business": "Bisnis Anda",
+
+  "Name": "Nama",
+  "Email": "Email",
+  "Password": "Kata sandi",
+  "Password is required": "Kata sandi wajib di isi",
+  "Username": "Nama pengguna",
+  "Username is required": "Nama pengguna wajib di isi",
+  "Username or password incorrect.": "Nama pengguna atau kata sandir salah!",
+  "Remember me": "Ingat saya",
+  "Version": "Versi",
+  "Don't have an account? Please register": "Belum punya akun? Yuk daftar",
+  "Have an account? Please login": "Sudah punya akun? Yuk masuk",
+
+  "More info via Whatsapp?": "Mau gabung via Whatsapp?",
+  "Click here!": "Klik disini!"
+}

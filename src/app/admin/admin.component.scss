@@ -1,0 +1,30 @@
+@import "../../theme/theme-variables";
+
+.sidebar-wrapper {
+  width: 225px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 999;
+  color: #e1e1e1;
+  background: transparent linear-gradient(96deg, #569AD3 0%, #488CC7 100%) 0% 0%;
+  border: 0;
+  transition: all ease-in-out 0.5s;
+}
+
+.main-content {
+  margin-left: 225px;
+  margin-bottom: 10rem;
+  transition: all ease-in-out 0.5s;
+}
+
+.blank-page {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  font-weight: 400;
+}

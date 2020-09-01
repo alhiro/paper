@@ -1,0 +1,44 @@
+<!-- START SECTION HEADER -->
+<header>
+  <div class="header-wrap">
+    <div class="user-header">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+            <!-- START BLOCK INNER HEADER -->
+            <div class="iner-user-header">
+              <div class="bars">
+                <a href="javascript:void(0);" (click)="toggleSideMenu()">
+                  <i class="fa fa-bars"></i>
+                </a>
+              </div>
+              <div class="user-settings">
+                <ul>
+                  <li ngbDropdown display="dynamic" placement="bottom-right">
+                    <a routerLink="/login" class="header-sign" *ngIf="!loggedIn">
+                      <img src="assets/icon/user-circle.svg" />
+                    </a>
+                    <a href="javascript:void(0);" class="header-sign" ngbDropdownToggle *ngIf="loggedIn">
+                      <img src="assets/icon/user-circle.svg" /> <span>{{ email }}</span>
+                    </a>
+                    <div ngbDropdownMenu aria-labelledby="user-dropdown" *ngIf="loggedIn" class="user-dropdown">
+                      <h6 class="dropdown-header">
+                        <span translate>Hi,</span> <b>{{ email }}</b>
+                      </h6>
+                      <!-- <div class="dropdown-divider"></div> -->
+                      <ul>
+                        <li><a (click)="logout()">Logout</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- END BLOCK INNER HEADER -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- END SECTION HEADER -->

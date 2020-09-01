@@ -1,0 +1,10 @@
+<div class="admin-wrapper" *ngIf="loggedIn">
+  <div class="sidebar-wrapper">
+    <app-sidebar></app-sidebar>
+  </div>
+  <div class="main-content">
+    <admin-header></admin-header>
+    <router-outlet></router-outlet>
+    <!-- <admin-footer></admin-footer> -->
+  </div>
+</div>
